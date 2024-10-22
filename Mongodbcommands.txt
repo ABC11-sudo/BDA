@@ -1,0 +1,9 @@
+mongosh
+use myDatabase
+db.createCollection("students")
+db.students.insertOne({name:"John Doe", age:34, department:"CSE"})
+db.students.insertMany([ { name: "Alice", age: 22, department: "CSE" }, { name: "Bob", age: 30, department: "CSE" }] )
+db.students.find()
+db.students.updateOne({name:"John Doe"},{$set: {age:20}})
+db.students.deleteOne({name:"Alice"})
+db.students.drop()
